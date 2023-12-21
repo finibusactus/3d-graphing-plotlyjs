@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="./styles.css">
+  <title>3D Graphing Using Plotyjs</title>
+</head>
+
+<body>
+  <div>
+    <div>
+      <select id="selectPresets">
+        <option>Sine Graph</option>
+        <option>Leaf Graph</option>
+        <option>Fuzzy Sine Graph</option>
+        <option>Hill Graph</option>
+        <option>Fuzzy Hill Graph</option>
+        <option>Ripple Graph</option>
+      </select>
+    </div>
+    <div>
+        <label for="formula">Type in a formula: </label>
+        <br>
+        <textarea id="formula" name="formula"></textarea>
+        <br>
+        <label for="startNumber">Starts at: </label>
+        <input id="startNumber" type="number" name="startNumber">
+        <br>
+        <label for="endNumber">Ends at: </label>
+        <input id="endNumber" type="number" name="endNumber">
+        <br>
+        <label for="step">Step: </label>
+        <input id="step" type="number" name="step">
+        <button id="plotButton">Plot</button>
+    </div>
+  <div id="graphDiv"></div>
+  <script src='https://cdn.plot.ly/plotly-2.27.0.min.js'></script>
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/mathjs/9.2.0/math.js'></script>
+  <script type="module" src="./script.js"></script>
+  <script type="module" src="./presets.js"></script>
+</body>
+
+</html>
