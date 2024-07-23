@@ -9,7 +9,7 @@ const rippleGraph = {formula:"z=((-e^(-x*y/1)*cos( (x^2+y^2)/10 ))+14*log(10000/
 
 const dataPresets = {"Sine Graph":sineGraph, "Leaf Graph":leafGraph, "Fuzzy Sine Graph":fuzzySineGraph, 'Hill Graph':HillGraph, "Fuzzy Hill Graph":fuzzyHillGraph, 'Ripple Graph': rippleGraph};
 
-//https://www.physicsforums.com/threads/cool-3-d-functions-for-graphing.140087/ [rippleGraph]
+// https://www.physicsforums.com/threads/cool-3-d-functions-for-graphing.140087/ [rippleGraph]
 
 
 export {dataPresets};
