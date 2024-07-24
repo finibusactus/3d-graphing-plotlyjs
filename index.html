@@ -21,28 +21,32 @@
       </select>
     </div>
     <div>
-        <input type="checkbox" id="useJavascriptInsteadOfMathjs">
-        <label for="useJavascriptInsteadOfMathjs">Use evaluated javascript instead of MathJS library</label>
-        <br>
-        <label for="formula">Type in a formula: </label>
-        <br>
-        <textarea id="formula" name="formula"></textarea>
-        <br>
-        <label for="startNumber">Starts at: </label>
-        <input id="startNumber" type="number" name="startNumber">
-        <br>
-        <label for="endNumber">Ends at: </label>
-        <input id="endNumber" type="number" name="endNumber">
-        <br>
-        <label for="step">Step: </label>
-        <input id="step" type="number" name="step">
-        <button id="plotButton">Plot</button>
+      <input type="checkbox" id="useJavascriptInsteadOfMathjs">
+      <label for="useJavascriptInsteadOfMathjs">Use javascript instead of MathJS</label>
+      <br>
+      <label for="formula">Type in a formula: </label>
+      <br>
+      <textarea id="formula" name="formula"></textarea>
+      <br>
+      <label for="startNumber">Starts at: </label>
+      <input id="startNumber" type="number" name="startNumber">
+      <br>
+      <label for="endNumber">Ends at: </label>
+      <input id="endNumber" type="number" name="endNumber">
+      <br>
+      <label for="step">Step: </label>
+      <input id="step" type="number" name="step">
+      <button id="plotButton">Plot</button>
     </div>
-  <div id="graphDiv"></div>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/plotly.js/2.34.0/plotly.min.js" integrity="sha512-pH45RLZKz14g8UuQC8days10TDtKG3vXHpDH0UHjnF9HKxGYGzKELe1ship9QXFekhfRfRFEcpemtSvqT5E4oQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjs/13.0.3/math.js" integrity="sha512-lAVGwhTndbBUjJlN0Lq4BNuOP0lpuGA9OUCA9bxRZrsehpmkiv8BcYdp91ON3XqJHWmVURGTw1d1W3LCr1k/1g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-  <script type="module" src="./script.js"></script>
-  <script type="module" src="./presets.js"></script>
+    <div id="graphDiv"></div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/plotly.js/2.34.0/plotly.min.js"
+      integrity="sha512-pH45RLZKz14g8UuQC8days10TDtKG3vXHpDH0UHjnF9HKxGYGzKELe1ship9QXFekhfRfRFEcpemtSvqT5E4oQ=="
+      crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjs/13.0.3/math.js"
+      integrity="sha512-lAVGwhTndbBUjJlN0Lq4BNuOP0lpuGA9OUCA9bxRZrsehpmkiv8BcYdp91ON3XqJHWmVURGTw1d1W3LCr1k/1g=="
+      crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script type="module" src="./script.js"></script>
+    <script type="module" src="./presets.js"></script>
 </body>
 
 </html>

@@ -2,6 +2,10 @@
 
 import { dataPresets } from "./presets.js";
 
+function evaluateZ() {
+
+}
+
 function generateDataPoints(startNumber, endNumber, step, formula) {
   let xData = [];
   let yData = [];
