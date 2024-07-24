@@ -2,11 +2,7 @@
 
 import { dataPresets } from "./presets.js";
 
-function evaluateZ() {
-
-}
-
-function generateDataPoints(startNumber, endNumber, step, formula) {
+function generateDataPoints(startNumber, endNumber, step, formula, useDangerousEval = false) {
   let xData = [];
   let yData = [];
   let zData = [];
@@ -17,9 +13,15 @@ function generateDataPoints(startNumber, endNumber, step, formula) {
   for (let y = startNumber; y <= endNumber; y += step) {
     let localXZData = [];
     for (let x = startNumber; x <= endNumber; x += step) {
-      let scope = { x: x, y: y };
-      math.evaluate(formula, scope);
-      localXZData.push(scope.z);
+      if (useDangerousEval) {
+        let z;
+        eval(formula)
+        localXZData.push(z);
+      } else {
+        let scope = { x: x, y: y };
+        math.evaluate(formula, scope);
+        localXZData.push(scope.z);
+      }
     }
     zData.push(localXZData);
   }
@@ -31,7 +33,8 @@ function plotGraph() {
   let endNumber = Number(document.getElementById("endNumber").value);
   let step = Number(document.getElementById("step").value);
   let formula = document.getElementById("formula").value;
-  let { xData, yData, zData } = generateDataPoints(startNumber, endNumber, step, formula);
+  let useDangerousEval = document.getElementById("useDangerousEval").checked
+  let { xData, yData, zData } = generateDataPoints(startNumber, endNumber, step, formula, useDangerousEval);
   Plotly.react(graphDiv, [{ type: "surface", x: xData, y: yData, z: zData }], { uirevision: 'true' })
 }
 

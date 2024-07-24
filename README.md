@@ -2,7 +2,9 @@
 #### A short and simple (though extremely slow) 3D grapher made using PlotlyJS
 
 This Grapher aims to be easy to use  
-MathJS chosen for ease of use eg. (generating random numbers and pi - compared to doing it in native javascript) (also convienently does input sanitation)  
+MathJS chosen for ease of use eg. (generating random numbers and pi - compared to doing it in native javascript)  
+Native Javascript is also supported
+
 Fills the issue that there are no 3D graphers available for PlotlyJS
 ### Screenshots
 
